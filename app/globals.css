@@ -1,11 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&family=Poppins:wght@400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-xsm: 320px; /* Extra Small Mobile */
+  --breakpoint-xmm: 375px; /* Extra Medium Mobile */
+  --breakpoint-xlm: 425px; /* Extra Large Mobile */
+
+  --font-sans: "Roboto Flex", sans-serif;
   --font-poppins: "Poppins", sans-serif;
   --font-manrope: "Manrope", sans-serif;
-}
 
-body {
-  font-family: var(--font-poppins), sans-serif;
+  --color-neutral-1: #ffffff;
+  --color-neutral-2: #f9f9f9;
+  --color-neutral-3: #505561;
+  --color-neutral-4: #0a0a0a;
+  --color-neutral-stroke: #eff0f1;
+  --color-theme-color1: #136dfb;
 }
