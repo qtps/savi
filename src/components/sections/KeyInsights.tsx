@@ -121,7 +121,7 @@ const KeyInsights = () => {
 
             {/* Button sections */}
             <div className="flex items-center gap-3 sm:gap-5">
-              {/* ১ম বাটন: Get the App Now */}
+              {/* First Button Get the App Now */}
               <button
                 onClick={createRipple}
                 className="relative transform-gpu overflow-hidden rounded-full bg-[#111111] px-6 py-3 text-sm font-medium text-white transition-transform duration-300 ease-out will-change-transform outline-none select-none focus:outline-none active:scale-95 sm:px-7 sm:py-3.5 md:hover:scale-105 md:hover:shadow-xl"
@@ -129,7 +129,7 @@ const KeyInsights = () => {
                 Get the App Now
               </button>
 
-              {/* ২য় বাটন: Arrow Button */}
+              {/* second Button Arrow*/}
               <button
                 onClick={createRipple}
                 className="relative flex h-11 w-11 transform-gpu items-center justify-center overflow-hidden rounded-full bg-[#2563eb] text-white transition-transform duration-300 ease-out will-change-transform outline-none select-none focus:outline-none active:scale-90 active:rotate-45 sm:h-12 sm:w-12 md:hover:scale-110 md:hover:rotate-45 md:hover:shadow-lg"
