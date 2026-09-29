@@ -1,23 +1,23 @@
-import { FeatureCard } from "@/src/components/ui/feature-card";
+import { FeatureCard } from '@/src/components/ui/feature-card';
 
 const features = [
   {
-    number: "01",
-    title: "Layout components",
+    number: '01',
+    title: 'Layout components',
     description:
-      "Keep shared navigation and footer pieces together in one predictable home.",
+      'Keep shared navigation and footer pieces together in one predictable home.',
   },
   {
-    number: "02",
-    title: "Page sections",
+    number: '02',
+    title: 'Page sections',
     description:
-      "Build pages from focused sections instead of turning one file into a monolith.",
+      'Build pages from focused sections instead of turning one file into a monolith.',
   },
   {
-    number: "03",
-    title: "UI primitives",
+    number: '03',
+    title: 'UI primitives',
     description:
-      "Collect reusable buttons, cards, badges, and controls as the product grows.",
+      'Collect reusable buttons, cards, badges, and controls as the product grows.',
   },
 ];
 
@@ -29,7 +29,7 @@ export function FeatureGrid() {
     >
       <div className="mb-8 flex items-end justify-between gap-6">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#e07851]">
+          <p className="text-sm font-semibold tracking-[0.18em] text-[#e07851] uppercase">
             Suggested structure
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em]">

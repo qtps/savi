@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
-import { assets } from "@/app/lib/assets";
-import { PrimaryButton } from "../ui/primary-btn";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { assets } from '@/app/lib/assets';
+import { PrimaryButton } from '../ui/primary-btn';
 
 const menuItems = [
-  { label: "All Pages", href: "#all" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Features", href: "#features" },
-  { label: "Reviews", href: "#reviews" },
+  { label: 'All Pages', href: '#all' },
+  { label: 'Pricing', href: '#pricing' },
+  { label: 'Features', href: '#features' },
+  { label: 'Reviews', href: '#reviews' },
 ];
 
 export function SiteHeader() {
@@ -26,13 +26,13 @@ export function SiteHeader() {
       setIsMenuOpen(false);
     };
 
-    document.addEventListener("pointerdown", handlePointerDown);
-    return () => document.removeEventListener("pointerdown", handlePointerDown);
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => document.removeEventListener('pointerdown', handlePointerDown);
   }, []);
 
   return (
     <header className="relative z-50 w-full bg-white/60 backdrop-blur-sm">
-      <div className="mx-auto flex container items-center justify-between px-4 py-6 xl:px-0">
+      <div className="container mx-auto flex items-center justify-between px-4 py-6 xl:px-0">
         {/* Logo */}
         <Link
           href="#top"
@@ -44,7 +44,7 @@ export function SiteHeader() {
             width={30}
             height={30}
             aria-hidden="true"
-            className="inline-block "
+            className="inline-block"
           />
           <span>Savi</span>
         </Link>
@@ -61,13 +61,13 @@ export function SiteHeader() {
               <span>All Pages</span>
               <ChevronDown
                 className={`h-4 w-4 transition-transform duration-200 ${
-                  isMenuOpen ? "rotate-180" : ""
+                  isMenuOpen ? 'rotate-180' : ''
                 }`}
               />
             </button>
 
             {isMenuOpen && (
-              <div className="absolute left-0 top-full z-50 mt-3 w-44 rounded-2xl border border-[#e7e2d6] bg-white p-2 shadow-[0_12px_30px_rgba(26,35,30,0.08)]">
+              <div className="absolute top-full left-0 z-50 mt-3 w-44 rounded-2xl border border-[#e7e2d6] bg-white p-2 shadow-[0_12px_30px_rgba(26,35,30,0.08)]">
                 {menuItems.map((item) => (
                   <Link
                     key={item.label}
@@ -106,7 +106,7 @@ export function SiteHeader() {
           aria-label="Toggle Mobile Menu"
           aria-expanded={isMobileMenuOpen}
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-          className="flex  text-[#17231e] focus:outline-none md:hidden"
+          className="flex text-[#17231e] focus:outline-none md:hidden"
         >
           {isMobileMenuOpen ? (
             <X className="h-6 w-6" />
@@ -118,7 +118,7 @@ export function SiteHeader() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="absolute left-0 top-full w-full border-b border-[#e7e2d6] bg-white/95 px-6 py-6 shadow-lg backdrop-blur-md md:hidden">
+        <div className="absolute top-full left-0 w-full border-b border-[#e7e2d6] bg-white/95 px-6 py-6 shadow-lg backdrop-blur-md md:hidden">
           <nav className="flex flex-col gap-4 text-[1.05rem] font-medium text-[#53635a]">
             <Link
               href="#pricing"
@@ -144,7 +144,7 @@ export function SiteHeader() {
 
             {/* Sub-menu links in Mobile */}
             <div className="my-2 border-t border-[#e7e2d6] pt-3">
-              <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-[#819287]">
+              <span className="mb-2 block text-xs font-semibold tracking-wider text-[#819287] uppercase">
                 Pages
               </span>
               <div className="flex flex-col gap-2 pl-2">

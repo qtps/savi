@@ -1,9 +1,9 @@
-import type { ButtonHTMLAttributes } from "react";
+import type { ButtonHTMLAttributes } from 'react';
 
 type PrimaryButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 export function PrimaryButton({
-  className = "",
+  className = '',
   ...props
 }: Readonly<PrimaryButtonProps>) {
   return (
