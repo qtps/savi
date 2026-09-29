@@ -5,6 +5,7 @@ export const assets = {
     arrow: '/icons/arrow.svg',
     goldlines: '/icons/goldlines.svg',
     satisfaction: '/icons/satisfaction.svg',
+    speed: '/icons/speed.svg',
     dollar: '/icons/doller.svg',
     waves: '/icons/waves.svg',
     emoji: '/icons/emoji.svg',
