@@ -2,6 +2,7 @@ import { SiteHeader } from '@/src/components/layout/site-header';
 import Hero from '@/src/components/sections/Hero';
 import KeyInsights from '@/src/components/sections/KeyInsights';
 import KeyFeatures from '@/src/components/sections/KeyFeatures';
+import Revolution from '@/src/components/sections/Revolution';
 
 export default function Page() {
   return (
@@ -10,6 +11,7 @@ export default function Page() {
       <Hero />
       <KeyInsights />
       <KeyFeatures />
+      <Revolution />
 
       {/* <FeatureGrid />
       <SiteFooter /> */}
