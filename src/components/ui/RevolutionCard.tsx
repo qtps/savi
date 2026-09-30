@@ -6,7 +6,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
-// GSAP ScrollTrigger রেজিস্টার করা
 gsap.registerPlugin(ScrollTrigger);
 
 const createRipple = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -71,7 +70,7 @@ const RevolutionCard = () => {
           ease: 'power2.out',
           scrollTrigger: {
             trigger: containerRef.current,
-            start: 'top 80%', // স্ক্রিনের ৮০% এ সেকশনটি আসলে এনিমেশন শুরু হবে
+            start: 'top 80%', // স্
             toggleActions: 'play none none reset',
           },
         },
