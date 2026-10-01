@@ -13,6 +13,7 @@ const Hero = () => {
         alt="gravity curve"
         width={1920}
         height={1080}
+        loading="eager"
         className="absolute inset-0 h-full w-full object-cover opacity-6"
       />
 

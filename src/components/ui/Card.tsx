@@ -70,15 +70,15 @@ const Card: React.FC<CardProps> = ({
   className = '',
 }) => {
   return (
-    <div className={`w-full space-y-6 text-left md:w-1/2 ${className}`}>
+    <div className={`w-full space-y-6 text-left${className}`}>
       <h1 className="text-3xl leading-tight font-bold text-gray-900 md:text-4xl">
         {title}
       </h1>
 
       {(description1 || description2) && (
         <div className="space-y-4 text-sm leading-relaxed text-gray-600 md:text-base">
-          {description1 && <p>{description1}</p>}
-          {description2 && <p>{description2}</p>}
+          {description1 && <div>{description1}</div>}
+          {description2 && <div>{description2}</div>}
         </div>
       )}
 

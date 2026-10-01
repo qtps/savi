@@ -22,7 +22,7 @@ export function SiteHeader() {
   useEffect(() => {
     const handlePointerDown = (event: MouseEvent) => {
       const target = event.target as Node;
-      if (menuRef.current && menuRef.current.contains(target)) return;
+      if (menuRef.current?.contains(target)) return;
       setIsMenuOpen(false);
     };
 
@@ -44,7 +44,7 @@ export function SiteHeader() {
             width={30}
             height={30}
             aria-hidden="true"
-            className="inline-block"
+            className="inline-block h-7.5 w-7.5"
           />
           <span>Savi</span>
         </Link>
