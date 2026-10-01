@@ -111,7 +111,7 @@ const KeyFeaturesCard = () => {
             {/* Sub Action Buttons */}
             <div className="mt-4 flex items-center justify-between gap-3">
               <button className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-slate-50 py-3 text-xs font-medium text-slate-600 sm:text-sm">
-                {/* TODO: Send Money Icon */}
+              
                 <div>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={assets.icons.wallet} alt="wallet" />
@@ -119,7 +119,7 @@ const KeyFeaturesCard = () => {
                 Send money
               </button>
               <button className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-slate-50 py-3 text-xs font-medium text-slate-600 sm:text-sm">
-                {/* TODO: Receive Money Icon */}
+               
                 <div>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={assets.icons.wallet} alt="wallet" />
@@ -166,7 +166,7 @@ const KeyFeaturesCard = () => {
             {/* Pie Chart / Analytics Mockup */}
             <div className="flex items-center gap-4 py-2">
               <div className="">
-                {/* TODO: Replace with Chart / Image */}
+               
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={assets.images.pieChart} alt="chart" />
               </div>
