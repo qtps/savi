@@ -36,7 +36,7 @@ const SpendingCard = () => {
   return (
     <div
       ref={containerRef}
-      className="bg-neutral-2 mx-auto w-full max-w-sm rounded-[36px] p-5 shadow-xl"
+      className="bg-neutral-2 mx-auto w-full max-w-sm rounded-[36px] p-5 shadow-xl transition-shadow hover:shadow-2xl"
     >
       {/* Top Blue Main Card */}
       <div className="relative rounded-[28px] bg-[#0066FF] p-6 text-white shadow-md">

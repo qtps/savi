@@ -5,6 +5,7 @@ import { assets } from '@/app/lib/assets';
 import Card from './Card';
 import { useProgressAnimation } from '@/src/components/hooks/useProgressAnimation.ts';
 import SpendingCard from './SpendingCard';
+import OverviewCard from './OverviewCard';
 
 const RevolutionCard = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -153,20 +154,15 @@ const RevolutionCard = () => {
 
         <SpendingCard />
 
-        {/* Row 2: Green & Yellow */}
-        <div className="flex min-h-37.5 items-center justify-center rounded-2xl bg-emerald-500 p-6 text-xl font-bold text-white shadow-md">
-          Hello 3 (Green)
-        </div>
-        <div className="flex min-h-37.5 items-center justify-center rounded-2xl bg-yellow-400 p-6 text-xl font-bold text-gray-900 shadow-md">
-          Hello 4 (Yellow)
-        </div>
-
-        {/* Row 3: Ash (Gray) & Black */}
-        <div className="flex min-h-37.5 items-center justify-center rounded-2xl bg-gray-400 p-6 text-xl font-bold text-white shadow-md">
-          Hello 5 (Ash/Gray)
-        </div>
-        <div className="flex min-h-37.5 items-center justify-center rounded-2xl bg-black p-6 text-xl font-bold text-white shadow-md">
-          Hello 6 (Black)
+        <OverviewCard />
+        <div className="pt-15">
+          <Card
+            title="Automated Transaction Categorization"
+            description1="Automatically categorizes transactions into predefined categories such as groceries, dining, entertainment, and utilities using machine learning."
+            description2="Take control of your money with Savi. Track your spending, save smartly, and invest in one easy-to-use app.
+        Start exploring now."
+            className=""
+          />
         </div>
       </div>
     </div>
