@@ -63,7 +63,7 @@ const NevigatThrough: React.FC = () => {
       statLabel: 'Goal Reached',
       statValue: '88%',
       chartHeights: ['50%', '65%', '80%', '88%', '92%'],
-      appImageFront: '/images/slide3-front.png',
+      appImageFront: '/images/mobile-2.png',
     },
     {
       id: 4,
@@ -74,7 +74,7 @@ const NevigatThrough: React.FC = () => {
       statLabel: 'Daily Budget',
       statValue: '$45.00',
       chartHeights: ['80%', '60%', '90%', '50%', '70%'],
-      appImageFront: '/images/slide4-front.png',
+      appImageFront: '/images/mobile-3.svg',
     },
   ];
 

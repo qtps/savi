@@ -7,7 +7,7 @@ export const useNevigatAnimation = (
   chartBarsRef: RefObject<HTMLElement | null>,
 ) => {
   useEffect(() => {
-    // Component properly mount হওয়া নিশ্চিত করার জন্য Animation-কে frame scheduling-এ রাখা
+    // Component properly mount
     const animationFrame = requestAnimationFrame(() => {
       // Slide Content Animation (Fade in & Slide up)
       if (slideContentRef.current) {
