@@ -5,6 +5,7 @@ import KeyFeatures from '@/src/components/sections/KeyFeatures';
 import Revolution from '@/src/components/sections/Revolution';
 import CurrencyExchange from '@/src/components/sections/CurrencyExchange';
 import TrackAndReach from '@/src/components/sections/TrackAndReach';
+import NevigatThrough from '@/src/components/sections/NevigatThrough';
 
 export default function Page() {
   return (
@@ -16,6 +17,7 @@ export default function Page() {
       <Revolution />
       <CurrencyExchange />
       <TrackAndReach />
+      <NevigatThrough />
 
       {/* <FeatureGrid />
       <SiteFooter /> */}
