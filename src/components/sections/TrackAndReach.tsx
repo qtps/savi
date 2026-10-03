@@ -4,7 +4,7 @@ import { assets } from '@/app/lib/assets';
 
 const TrackAndReach = () => {
   return (
-    <section className="mx-auto w-full max-w-7xl px-6 py-16 font-sans">
+    <section className="container mx-auto w-full px-6 py-16 font-sans">
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
         {/* Left Column - Content */}
         <div className="space-y-12">
