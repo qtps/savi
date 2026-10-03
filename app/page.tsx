@@ -8,6 +8,7 @@ import TrackAndReach from '@/src/components/sections/TrackAndReach';
 import NevigatThrough from '@/src/components/sections/NevigatThrough';
 import UserReviews from '@/src/components/sections/UserReviews';
 import { SiteFooter } from '@/src/components/layout/site-footer';
+import TrackYourSpending from '@/src/components/sections/TrackYourSpending';
 
 export default function Page() {
   return (
@@ -21,6 +22,7 @@ export default function Page() {
       <TrackAndReach />
       <NevigatThrough />
       <UserReviews />
+      <TrackYourSpending />
 
       {/* <FeatureGrid /> */}
       <SiteFooter />

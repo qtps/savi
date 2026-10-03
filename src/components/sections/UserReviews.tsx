@@ -151,9 +151,13 @@ const UserReviews = () => {
             >
               <div>
                 <div className="mb-6 flex items-center justify-between">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl  text-white">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl text-white">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={assets.icons.emoji} alt="Quote Icon" className="h-16 w-16" />
+                    <img
+                      src={assets.icons.emoji}
+                      alt="Quote Icon"
+                      className="h-16 w-16"
+                    />
                   </div>
 
                   <div className="flex gap-1 text-amber-400">

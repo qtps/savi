@@ -17,8 +17,8 @@ const AppleBtn = () => {
       y: -2,
       duration: 0.3,
       ease: 'power2.out',
-      force3D: true, 
-      overwrite: 'auto', 
+      force3D: true,
+      overwrite: 'auto',
     });
   });
 
@@ -60,7 +60,7 @@ const AppleBtn = () => {
       onMouseLeave={handleMouseLeave}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
- 
+
       className="bg-neutral-4 flex cursor-pointer items-center gap-2 rounded-full px-3 py-2 text-white will-change-transform hover:shadow-lg hover:shadow-black/20 max-[360px]:px-2 max-[360px]:py-1 sm:px-6 sm:py-3 md:px-8 md:py-4"
     >
       <Image
