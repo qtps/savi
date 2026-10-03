@@ -4,6 +4,7 @@ import KeyInsights from '@/src/components/sections/KeyInsights';
 import KeyFeatures from '@/src/components/sections/KeyFeatures';
 import Revolution from '@/src/components/sections/Revolution';
 import CurrencyExchange from '@/src/components/sections/CurrencyExchange';
+import TrackAndReach from '@/src/components/sections/TrackAndReach';
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
       <KeyFeatures />
       <Revolution />
       <CurrencyExchange />
+      <TrackAndReach />
 
       {/* <FeatureGrid />
       <SiteFooter /> */}

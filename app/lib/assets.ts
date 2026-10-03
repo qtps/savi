@@ -36,5 +36,7 @@ export const assets = {
     pieChart: '/images/pichart.svg',
     vectorCurve: '/images/vector-curve.svg',
     visa: '/images/visa.png',
+    singleMobile: '/images/singleMobile.svg',
+    bgTwo: '/images/bgTwo.svg',
   },
 } as const;
