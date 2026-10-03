@@ -10,6 +10,7 @@ import {
   Zap,
   LucideIcon,
 } from 'lucide-react';
+import Image from 'next/image';
 
 import { useNevigatAnimation } from '../hooks/useNevigatAnimation';
 
@@ -103,9 +104,16 @@ const NevigatThrough: React.FC = () => {
   if (!isMounted) return null;
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 py-12 font-sans select-none">
+    <section className="container mx-auto w-full px-4 py-12 font-sans select-none">
       <div className="relative grid grid-cols-1 items-center gap-8 overflow-hidden rounded-[36px] border border-gray-900 bg-[#0b0b0b] p-8 text-white shadow-2xl md:p-12 lg:grid-cols-12 lg:p-16">
         {/* Left Column */}
+        <Image
+          src="/images/spring.svg"
+          alt="spring"
+          width={100}
+          height={100}
+          className="pointer-events-none absolute top-30 left-1/2 z-0 h-auto w-1/2 -translate-x-1/2 opacity-10"
+        />
         <div className="space-y-2 lg:col-span-4">
           <h2 className="text-3xl leading-tight font-normal tracking-tight text-gray-300 md:text-4xl lg:text-5xl">
             Navigate through
@@ -115,19 +123,19 @@ const NevigatThrough: React.FC = () => {
           </h2>
         </div>
 
-        {/* Center Column */}
-        <div className="relative flex items-center justify-center py-8 lg:col-span-4">
-          <div className="relative z-10 flex w-full max-w-85 items-center justify-center">
-            <div className="relative z-20 w-55 transform overflow-hidden rounded-2xl text-gray-900 shadow-2xl sm:w-60">
+        {/* Center Column - Fixes applied here */}
+        <div className="relative flex min-h-100 items-end justify-center py-4 lg:col-span-4">
+          <div className="h-95] relative z-10 flex w-full max-w-xs items-end justify-center">
+            <div className="relative z-20 flex h-full w-60 items-end justify-center overflow-hidden rounded-2xl text-gray-900 shadow-2xl">
               {currentSlide.appImageFront ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={currentSlide.appImageFront}
                   alt={currentSlide.title}
-                  className="block h-auto w-full object-cover"
+                  className="block max-h-full w-full object-contain object-bottom transition-all duration-300 hover:scale-105"
                 />
               ) : (
-                <div className="space-y-3 bg-white p-4">
+                <div className="w-full space-y-3 bg-white p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-1.5">
                       <span className="inline-block h-2.5 w-2.5 rounded-full bg-blue-600"></span>

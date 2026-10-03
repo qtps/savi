@@ -38,5 +38,6 @@ export const assets = {
     visa: '/images/visa.png',
     singleMobile: '/images/singleMobile.svg',
     bgTwo: '/images/bgTwo.svg',
+    spring: '/images/spring.svg',
   },
 } as const;
