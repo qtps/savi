@@ -2,53 +2,19 @@
 
 import React from 'react';
 import { assets } from '@/app/lib/assets';
-import gsap from 'gsap';
-
-const createRipple = (event: React.MouseEvent<HTMLButtonElement>) => {
-  if (typeof window === 'undefined') return;
-
-  const button = event.currentTarget;
-  const rect = button.getBoundingClientRect();
-
-  const size = Math.max(rect.width, rect.height) * 2;
-  const x = event.clientX - rect.left;
-  const y = event.clientY - rect.top;
-
-  const circle = document.createElement('span');
-  circle.style.position = 'absolute';
-  circle.style.borderRadius = '50%';
-  circle.style.pointerEvents = 'none';
-  circle.style.backgroundColor = 'rgba(255, 255, 255, 0.35)';
-  circle.style.width = `${size}px`;
-  circle.style.height = `${size}px`;
-  circle.style.left = `${x}px`;
-  circle.style.top = `${y}px`;
-
-  button.appendChild(circle);
-
-  gsap.fromTo(
-    circle,
-    {
-      xPercent: -50,
-      yPercent: -50,
-      scale: 0,
-      opacity: 0.6,
-    },
-    {
-      scale: 1,
-      opacity: 0,
-      duration: 0.6,
-      ease: 'power2.out',
-      onComplete: () => {
-        circle.remove();
-      },
-    },
-  );
-};
+import {
+  createRipple,
+  useInsightStatsAnimation,
+} from '@/src/components/hooks/useInsightStatsAnimation';
 
 const KeyInsights = () => {
+  const { containerRef, stat1Ref, stat2Ref } = useInsightStatsAnimation();
+
   return (
-    <section className="bg-neutral-2 container mx-auto px-4 py-16 font-sans sm:px-6 lg:px-8">
+    <section
+      ref={containerRef}
+      className="bg-neutral-2 container mx-auto px-4 py-16 font-sans sm:px-6 lg:px-8"
+    >
       <div className="h-auto w-full">
         {/* Top Section: Brand Logos */}
         <div className="mb-16 text-center">
@@ -129,7 +95,7 @@ const KeyInsights = () => {
                 Get the App Now
               </button>
 
-              {/* second Button Arrow*/}
+              {/* Second Button Arrow*/}
               <button
                 onClick={createRipple}
                 className="relative flex h-11 w-11 transform-gpu items-center justify-center overflow-hidden rounded-full bg-[#2563eb] text-white transition-transform duration-300 ease-out will-change-transform outline-none select-none focus:outline-none active:scale-90 active:rotate-45 sm:h-12 sm:w-12 md:hover:scale-110 md:hover:rotate-45 md:hover:shadow-lg"
@@ -147,7 +113,7 @@ const KeyInsights = () => {
           {/* Right Side Cards */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-7">
             {/* Card 1 */}
-            <div className="flex flex-col justify-between space-y-8 rounded-3xl bg-white p-8 shadow-xs">
+            <div className="flex flex-col justify-between space-y-8 rounded-3xl bg-white p-8 transition-transform duration-300 ease-out hover:scale-105 hover:shadow-xl">
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#2563eb] text-white">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -159,8 +125,11 @@ const KeyInsights = () => {
               </div>
               <div className="space-y-3">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-slate-900 sm:text-5xl">
-                    80%
+                  <span
+                    ref={stat1Ref}
+                    className="text-4xl font-bold text-slate-900 sm:text-5xl"
+                  >
+                    0%
                   </span>
                   <span className="text-lg font-medium text-slate-700 sm:text-xl">
                     of users
@@ -173,7 +142,7 @@ const KeyInsights = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="flex flex-col justify-between space-y-8 rounded-3xl bg-white p-8 shadow-xs">
+            <div className="flex flex-col justify-between space-y-8 rounded-3xl bg-white p-8 transition-transform duration-300 ease-out hover:scale-105 hover:shadow-xl">
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#2563eb] text-white">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -185,8 +154,11 @@ const KeyInsights = () => {
               </div>
               <div className="space-y-3">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-slate-900 sm:text-5xl">
-                    500k
+                  <span
+                    ref={stat2Ref}
+                    className="text-4xl font-bold text-slate-900 sm:text-5xl"
+                  >
+                    0k
                   </span>
                   <span className="text-lg font-medium text-slate-700 sm:text-xl">
                     reviews

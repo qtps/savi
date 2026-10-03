@@ -7,6 +7,7 @@ import CurrencyExchange from '@/src/components/sections/CurrencyExchange';
 import TrackAndReach from '@/src/components/sections/TrackAndReach';
 import NevigatThrough from '@/src/components/sections/NevigatThrough';
 import UserReviews from '@/src/components/sections/UserReviews';
+import { SiteFooter } from '@/src/components/layout/site-footer';
 
 export default function Page() {
   return (
@@ -21,8 +22,8 @@ export default function Page() {
       <NevigatThrough />
       <UserReviews />
 
-      {/* <FeatureGrid />
-      <SiteFooter /> */}
+      {/* <FeatureGrid /> */}
+      <SiteFooter />
     </main>
   );
 }

@@ -1,9 +1,4 @@
-import {
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 interface Review {
@@ -22,7 +17,7 @@ export const useReviewSlider = (
 ) => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState<boolean>(false);
-  const isAnimatingRef = useRef<boolean>(false); 
+  const isAnimatingRef = useRef<boolean>(false);
 
   // Next Slide Logic
   const slideNext = useCallback(() => {
@@ -45,7 +40,6 @@ export const useReviewSlider = (
       duration: 0.6,
       ease: 'power2.inOut',
       onComplete: () => {
-       
         setReviews((prev) => {
           if (prev.length === 0) return prev;
           const updated = [...prev];
@@ -54,7 +48,6 @@ export const useReviewSlider = (
           return updated;
         });
 
-    
         requestAnimationFrame(() => {
           if (sliderRef.current) {
             gsap.set(sliderRef.current, { x: 0 });
@@ -83,7 +76,7 @@ export const useReviewSlider = (
     const gap = 24;
     const moveDistance = cardWidth + gap;
 
-    // Last  to first position instant move 
+    // Last  to first position instant move
     setReviews((prev) => {
       if (prev.length === 0) return prev;
       const updated = [...prev];

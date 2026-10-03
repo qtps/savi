@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useReviewSlider } from '@/src/components/hooks/useReviewSlider';
+import { assets } from '@/app/lib/assets';
 
 interface Review {
   id: string;
@@ -33,7 +34,7 @@ const UserReviews = () => {
 
   // Fetch data from backend
   useEffect(() => {
-    const fetchReviews = async () => {
+    const fetchReviews = () => {
       try {
         const dummyData: Review[] = [
           {
@@ -86,7 +87,7 @@ const UserReviews = () => {
       }
     };
 
-    void fetchReviews();
+    fetchReviews();
   }, []);
 
   const handleCardClick = (id: string) => {
@@ -104,10 +105,10 @@ const UserReviews = () => {
       {/* Header section with Controls */}
       <div className="mb-10 flex items-end justify-between">
         <div>
-          <h2 className="mb-2 text-3xl font-bold text-gray-900">
+          <h2 className="mb-2 text-3xl font-bold text-gray-900 lg:text-5xl">
             What Our Users Say
           </h2>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-500 lg:text-xl">
             Real stories from people managing their finances smart.
           </p>
         </div>
@@ -150,8 +151,9 @@ const UserReviews = () => {
             >
               <div>
                 <div className="mb-6 flex items-center justify-between">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-600 text-white">
-                    <MessageSquareQuote size={22} className="fill-current" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl  text-white">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={assets.icons.emoji} alt="Quote Icon" className="h-16 w-16" />
                   </div>
 
                   <div className="flex gap-1 text-amber-400">

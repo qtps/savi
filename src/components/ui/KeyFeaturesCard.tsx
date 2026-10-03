@@ -110,17 +110,21 @@ const KeyFeaturesCard = () => {
 
             {/* Sub Action Buttons */}
             <div className="mt-4 flex items-center justify-between gap-3">
-              <button className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-slate-50 py-3 text-xs font-medium text-slate-600 sm:text-sm">
+              <button className="bg-neutral-2 flex flex-1 items-center justify-center gap-2 rounded-xl border border-slate-400 py-3 text-xs font-semibold text-slate-700 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-slate-50 hover:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.1)] active:translate-y-0 active:shadow-sm sm:text-sm">
                 <div>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={assets.icons.wallet} alt="wallet" />
                 </div>
                 Send money
               </button>
-              <button className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-slate-50 py-3 text-xs font-medium text-slate-600 sm:text-sm">
+              <button className="bg-neutral-2 flex flex-1 items-center justify-center gap-2 rounded-xl border border-slate-400 py-3 text-xs font-semibold text-slate-700 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-slate-50 hover:shadow-[0_8px_25px_-5px_rgba(0,0,0,0.1)] active:translate-y-0 active:shadow-sm sm:text-sm">
                 <div>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={assets.icons.wallet} alt="wallet" />
+                  <img
+                    src={assets.icons.walletAdd}
+                    alt="wallet"
+                    className="invert-gray brightness-0"
+                  />
                 </div>
                 Receive money
               </button>
